@@ -13,7 +13,7 @@ const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 const provider = new ethers.JsonRpcProvider(`https://mainnet.infura.io/v3/${INFURA_PROJECT_ID}`);
 
 const server = new McpServer({
-  name: "Ethereum Block High",
+  name: "Ethereum Block Height",
   version: "0.0.1",
 });
 
@@ -175,4 +175,3 @@ server.tool(
 
 const transport = new StdioServerTransport();
 await server.connect(transport);
-console.log("✅ MCP Agent is running and ready for Claude!");
